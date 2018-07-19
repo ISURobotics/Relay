@@ -35,8 +35,3 @@ if __name__ == '__main__':
 
     thresh_thread = threading.Thread(target=Threshold_HSV, args=(1, 2, 15, 15, 15, 100, 100, 200, True)) #Params = inputSensorID, outputSensorID, hsvLOW, hsvHigh, visualizeBoolean
     thresh_thread.start()
-
-    # app = QApplication(sys.argv)
-    # ex = Example()
-    #
-    # sys.exit(app.exec_())
