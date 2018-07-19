@@ -33,5 +33,9 @@ if __name__ == '__main__':
     hsv_thread = threading.Thread(target=HSV_Transform, args=(0, 1, True)) #Params = inputSensorID, outputSensorID, visualizeBoolean
     hsv_thread.start()
 
-    thresh_thread = threading.Thread(target=Threshold_HSV, args=(1, 2, 15, 15, 15, 100, 100, 200, True)) #Params = inputSensorID, outputSensorID, hsvLOW, hsvHigh, visualizeBoolean
+    thresh_thread = threading.Thread(target=Threshold_HSV, args=(1, 2, 15, 15, 0, 255, 255, 60, True)) #Params = inputSensorID, outputSensorID, hsvLOW, hsvHigh, visualizeBoolean
     thresh_thread.start()
+
+    #Another example thread showing how you can use a message in more than one receiving thread
+    rgb__thresh_thread = threading.Thread(target=Threshold_HSV, args = (0, 3, 15, 15, 0, 255, 255, 60, True))
+    rgb__thresh_thread.start()

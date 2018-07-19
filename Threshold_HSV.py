@@ -16,7 +16,7 @@ class Threshold_HSV():
     def dispatcher_receive(self, message):
         self.thresh = cv2.inRange(message, self.lowBound, self.highBound)
         if self.visualize:
-            cv2.imshow("Thresholded Image", self.thresh)
+            cv2.imshow("Thresholded Image"+str(self.signal), self.thresh)
             cv2.waitKey(1)
         dispatcher.send(message=self.thresh, signal=self.outsignal, sender=self.type)
 
