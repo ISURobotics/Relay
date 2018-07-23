@@ -15,7 +15,7 @@ class HSV_Transform():
     def dispatcher_receive(self, message):
         self.hsv = cv2.cvtColor(message, cv2.COLOR_BGR2HSV)
         if self.visualize:
-            cv2.imshow("HSV", self.hsv)
+            cv2.imshow("HSV"+self.outsignal, self.hsv)
             cv2.waitKey(1)
         dispatcher.send(message=self.hsv, signal=self.outsignal, sender=self.type)
 

@@ -1,0 +1,5 @@
+Name,Parameters
+OpenCV_Camera,"(1280, 720, 0, 0,True)"
+HSV_Transform,"(0, 1, False)"
+Threshold_HSV,"(1, 2, 15, 15, 0, 255, 255, 60, False)"
+HSV_Transform,"(0, 3, True)"
