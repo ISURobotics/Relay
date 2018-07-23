@@ -52,8 +52,6 @@ if __name__ == '__main__':
             objName = row['Name']
             paramString = row['Parameters']
             params = make_tuple(paramString)
-            print(objName)
-            print(params)
             objThread = threading.Thread(target=
                                          importedItemDict[objName], args=params)
             threadList.append(objThread)
