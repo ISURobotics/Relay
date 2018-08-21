@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QToolTip, QPushButton, QMessageBox
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QIcon, QFont
+# from PyQt5.QtWidgets import QApplication, QWidget, QToolTip, QPushButton, QMessageBox
+# from PyQt5.QtWidgets import *
+# from PyQt5.QtGui import QIcon, QFont
 from pydispatch import dispatcher
 import cv2
 import time, threading
@@ -47,7 +47,7 @@ print("Relay beginning...")
 # rgb__thresh_thread = threading.Thread(target=Threshold_HSV, args = (0, 3, 15, 15, 0, 255, 255, 60, True))
 # rgb__thresh_thread.start()
 
-configfilename = r'C:\Users\xpist\Google Drive\College\Robotics\Relay\Config1.csv'
+configfilename = r'Config1.csv'
 with open(configfilename) as csvfile:
     reader = csv.DictReader(csvfile)
     threadList = []
