@@ -1,4 +1,5 @@
 Name,Parameters
 OpenCV_Camera,"(640, 480, 0, 0,True)"
 HSV_Transform,"(0, 1, True)"
-Robot,"""firstrobot"""
+Robot,"(0, ""firstRobot"")"
+Fake_Position,"(0, .1)"

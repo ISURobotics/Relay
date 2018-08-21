@@ -14,9 +14,10 @@ from OpenCV_Camera import Camera
 from HSV_Transform import HSV_Transform
 from Threshold_HSV import Threshold_HSV
 from Contours import Find_Contours
+from Fake_Position import Generator
 
 importedItemDict = dict({'OpenCV_Camera': Camera, 'HSV_Transform': HSV_Transform, 'Threshold_HSV': Threshold_HSV,
-                         'Contours': Find_Contours, 'Robot': RobotType.Robot})
+                         'Contours': Find_Contours, 'Robot': RobotType.Robot, 'Fake_Position': Generator})
 
 print("Relay beginning...")
 
@@ -50,6 +51,7 @@ configfilename = r'C:\Users\xpist\Google Drive\College\Robotics\Relay\Config1.cs
 with open(configfilename) as csvfile:
     reader = csv.DictReader(csvfile)
     threadList = []
+    i = 0
     for row in reader:
         objName = row['Name']
         paramString = row['Parameters']
@@ -57,6 +59,7 @@ with open(configfilename) as csvfile:
         objThread = threading.Thread(target=
                                      importedItemDict[objName], args=params)
         threadList.append(objThread)
+        print(objName)
     for thread in threadList:
         thread.start()
 
