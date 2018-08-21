@@ -1,5 +1,4 @@
 Name,Parameters
 OpenCV_Camera,"(640, 480, 0, 0,True)"
 HSV_Transform,"(0, 1, True)"
-Threshold_HSV,"(1, 2, 15, 15, 0, 255, 255, 60, True)"
-Contours,"(2, 0, True)"
+Robot,"""firstrobot"""
